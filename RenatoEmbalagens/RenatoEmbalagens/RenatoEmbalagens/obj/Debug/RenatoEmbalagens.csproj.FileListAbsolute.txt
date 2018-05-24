@@ -24,3 +24,4 @@ C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\R
 C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\bin\Debug\RenatoEmbalagens.exe.config
 C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\bin\Debug\RenatoEmbalagens.exe
 C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\bin\Debug\RenatoEmbalagens.pdb
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormProduto.resources

@@ -38,5 +38,11 @@ namespace RenatoEmbalagens
             FormFornecedor formFor = new FormFornecedor();
             formFor.Show();
         }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProduto formPro = new FormProduto();
+            formPro.Show();
+        }
     }
 }
