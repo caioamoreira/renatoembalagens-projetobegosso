@@ -11,3 +11,16 @@ C:\Users\Caio Moreira\Documents\Fema\eng de software 1\RenatoEmbalagens\RenatoEm
 C:\Users\Caio Moreira\Documents\Fema\eng de software 1\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormMenu.resources
 C:\Users\Caio Moreira\Documents\Fema\eng de software 1\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormLogin.resources
 C:\Users\Caio Moreira\Documents\Fema\eng de software 1\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormFornecedor.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.csprojResolveAssemblyReference.cache
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormCliente.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormLogin.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormMenu.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormFornecedor.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.Properties.Resources.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.csproj.GenerateResource.Cache
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.csproj.CoreCompileInputs.cache
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.exe
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.pdb
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\bin\Debug\RenatoEmbalagens.exe.config
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\bin\Debug\RenatoEmbalagens.exe
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\bin\Debug\RenatoEmbalagens.pdb

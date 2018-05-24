@@ -53,14 +53,14 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.lblPesquisa = new System.Windows.Forms.Label();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.gbdPesquisar = new System.Windows.Forms.GroupBox();
+            this.pnlPesquisa = new System.Windows.Forms.GroupBox();
             this.rdbCidade = new System.Windows.Forms.RadioButton();
             this.rdbEmpresa = new System.Windows.Forms.RadioButton();
             this.rdbId = new System.Windows.Forms.RadioButton();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
             this.pnlPesquisar.SuspendLayout();
-            this.gbdPesquisar.SuspendLayout();
+            this.pnlPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblId
@@ -179,6 +179,7 @@
             this.dgvFornecedor.Name = "dgvFornecedor";
             this.dgvFornecedor.Size = new System.Drawing.Size(722, 150);
             this.dgvFornecedor.TabIndex = 12;
+            this.dgvFornecedor.DoubleClick += new System.EventHandler(this.dgvFornecedor_DoubleClick);
             // 
             // btnDeletar
             // 
@@ -189,6 +190,7 @@
             this.btnDeletar.TabIndex = 14;
             this.btnDeletar.Text = "&Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnGravar
             // 
@@ -199,6 +201,7 @@
             this.btnGravar.TabIndex = 15;
             this.btnGravar.Text = "&Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnCancelar
             // 
@@ -209,6 +212,7 @@
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -219,6 +223,7 @@
             this.btnEditar.TabIndex = 17;
             this.btnEditar.Text = "&Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnLimpar
             // 
@@ -229,6 +234,7 @@
             this.btnLimpar.TabIndex = 18;
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSair
             // 
@@ -239,6 +245,7 @@
             this.btnSair.TabIndex = 19;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnPesquisar
             // 
@@ -249,6 +256,7 @@
             this.btnPesquisar.TabIndex = 20;
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnInserir
             // 
@@ -259,6 +267,7 @@
             this.btnInserir.TabIndex = 21;
             this.btnInserir.Text = "&Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // pnlPesquisar
             // 
@@ -266,7 +275,7 @@
             this.pnlPesquisar.Controls.Add(this.btnFiltrar);
             this.pnlPesquisar.Controls.Add(this.lblPesquisa);
             this.pnlPesquisar.Controls.Add(this.txtPesquisa);
-            this.pnlPesquisar.Controls.Add(this.gbdPesquisar);
+            this.pnlPesquisar.Controls.Add(this.pnlPesquisa);
             this.pnlPesquisar.Location = new System.Drawing.Point(495, 12);
             this.pnlPesquisar.Name = "pnlPesquisar";
             this.pnlPesquisar.Size = new System.Drawing.Size(281, 238);
@@ -281,6 +290,7 @@
             this.btnFiltrar.TabIndex = 3;
             this.btnFiltrar.Text = "&Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // lblPesquisa
             // 
@@ -299,20 +309,20 @@
             this.txtPesquisa.Size = new System.Drawing.Size(238, 26);
             this.txtPesquisa.TabIndex = 1;
             // 
-            // gbdPesquisar
+            // pnlPesquisa
             // 
-            this.gbdPesquisar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.gbdPesquisar.Controls.Add(this.rdbCidade);
-            this.gbdPesquisar.Controls.Add(this.rdbEmpresa);
-            this.gbdPesquisar.Controls.Add(this.rdbId);
-            this.gbdPesquisar.Controls.Add(this.rdbTodos);
-            this.gbdPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbdPesquisar.Location = new System.Drawing.Point(20, 18);
-            this.gbdPesquisar.Name = "gbdPesquisar";
-            this.gbdPesquisar.Size = new System.Drawing.Size(238, 93);
-            this.gbdPesquisar.TabIndex = 0;
-            this.gbdPesquisar.TabStop = false;
-            this.gbdPesquisar.Text = "Pesquisar";
+            this.pnlPesquisa.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlPesquisa.Controls.Add(this.rdbCidade);
+            this.pnlPesquisa.Controls.Add(this.rdbEmpresa);
+            this.pnlPesquisa.Controls.Add(this.rdbId);
+            this.pnlPesquisa.Controls.Add(this.rdbTodos);
+            this.pnlPesquisa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlPesquisa.Location = new System.Drawing.Point(20, 18);
+            this.pnlPesquisa.Name = "pnlPesquisa";
+            this.pnlPesquisa.Size = new System.Drawing.Size(238, 93);
+            this.pnlPesquisa.TabIndex = 0;
+            this.pnlPesquisa.TabStop = false;
+            this.pnlPesquisa.Text = "Pesquisar";
             // 
             // rdbCidade
             // 
@@ -323,6 +333,7 @@
             this.rdbCidade.TabStop = true;
             this.rdbCidade.Text = "Cidade";
             this.rdbCidade.UseVisualStyleBackColor = true;
+            this.rdbCidade.CheckedChanged += new System.EventHandler(this.rdbCidade_CheckedChanged);
             // 
             // rdbEmpresa
             // 
@@ -333,6 +344,7 @@
             this.rdbEmpresa.TabStop = true;
             this.rdbEmpresa.Text = "Empresa";
             this.rdbEmpresa.UseVisualStyleBackColor = true;
+            this.rdbEmpresa.CheckedChanged += new System.EventHandler(this.rdbEmpresa_CheckedChanged);
             // 
             // rdbId
             // 
@@ -343,6 +355,7 @@
             this.rdbId.TabStop = true;
             this.rdbId.Text = "ID";
             this.rdbId.UseVisualStyleBackColor = true;
+            this.rdbId.CheckedChanged += new System.EventHandler(this.rdbId_CheckedChanged);
             // 
             // rdbTodos
             // 
@@ -353,6 +366,7 @@
             this.rdbTodos.TabStop = true;
             this.rdbTodos.Text = "Todos";
             this.rdbTodos.UseVisualStyleBackColor = true;
+            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
             // FormFornecedor
             // 
@@ -383,10 +397,11 @@
             this.Controls.Add(this.lblId);
             this.Name = "FormFornecedor";
             this.Text = "FormFornecedor";
+            this.Load += new System.EventHandler(this.FormFornecedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).EndInit();
             this.pnlPesquisar.ResumeLayout(false);
             this.pnlPesquisar.PerformLayout();
-            this.gbdPesquisar.ResumeLayout(false);
+            this.pnlPesquisa.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,7 +431,7 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Panel pnlPesquisar;
-        private System.Windows.Forms.GroupBox gbdPesquisar;
+        private System.Windows.Forms.GroupBox pnlPesquisa;
         private System.Windows.Forms.RadioButton rdbCidade;
         private System.Windows.Forms.RadioButton rdbEmpresa;
         private System.Windows.Forms.RadioButton rdbId;
