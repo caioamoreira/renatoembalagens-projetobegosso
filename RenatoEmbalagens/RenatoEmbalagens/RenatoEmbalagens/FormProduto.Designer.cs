@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvProduto = new System.Windows.Forms.DataGridView();
+            this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.lblId = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.lblValorCompra = new System.Windows.Forms.Label();
             this.lblValorVenda = new System.Windows.Forms.Label();
             this.lblEstoque = new System.Windows.Forms.Label();
-            this.lblIdProduto = new System.Windows.Forms.Label();
+            this.lblIdProdutos = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.txtEstoque = new System.Windows.Forms.TextBox();
             this.txtValorVenda = new System.Windows.Forms.TextBox();
@@ -48,26 +48,27 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pnlPesqusiar = new System.Windows.Forms.Panel();
-            this.gpbPesquisar = new System.Windows.Forms.GroupBox();
-            this.rdbTodos = new System.Windows.Forms.RadioButton();
-            this.rdbId = new System.Windows.Forms.RadioButton();
-            this.rdbEstoque = new System.Windows.Forms.RadioButton();
-            this.rdbDescricao = new System.Windows.Forms.RadioButton();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.lblPesquisar = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
+            this.lblPesquisar = new System.Windows.Forms.Label();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.gpbPesquisar = new System.Windows.Forms.GroupBox();
+            this.rdbEstoque = new System.Windows.Forms.RadioButton();
+            this.rdbId = new System.Windows.Forms.RadioButton();
+            this.rdbDescricao = new System.Windows.Forms.RadioButton();
+            this.rdbTodos = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.pnlPesqusiar.SuspendLayout();
             this.gpbPesquisar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvProduto
+            // dgvProdutos
             // 
-            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduto.Location = new System.Drawing.Point(48, 238);
-            this.dgvProduto.Name = "dgvProduto";
-            this.dgvProduto.Size = new System.Drawing.Size(601, 150);
-            this.dgvProduto.TabIndex = 0;
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Location = new System.Drawing.Point(48, 238);
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.Size = new System.Drawing.Size(601, 150);
+            this.dgvProdutos.TabIndex = 0;
+            this.dgvProdutos.DoubleClick += new System.EventHandler(this.dgvProdutos_DoubleClick);
             // 
             // lblId
             // 
@@ -119,14 +120,14 @@
             this.lblEstoque.TabIndex = 5;
             this.lblEstoque.Text = "Estoque:";
             // 
-            // lblIdProduto
+            // lblIdProdutos
             // 
-            this.lblIdProduto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblIdProduto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdProduto.Location = new System.Drawing.Point(157, 21);
-            this.lblIdProduto.Name = "lblIdProduto";
-            this.lblIdProduto.Size = new System.Drawing.Size(44, 22);
-            this.lblIdProduto.TabIndex = 6;
+            this.lblIdProdutos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblIdProdutos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdProdutos.Location = new System.Drawing.Point(157, 21);
+            this.lblIdProdutos.Name = "lblIdProdutos";
+            this.lblIdProdutos.Size = new System.Drawing.Size(44, 22);
+            this.lblIdProdutos.TabIndex = 6;
             // 
             // txtDescricao
             // 
@@ -165,6 +166,7 @@
             this.btnInserir.TabIndex = 11;
             this.btnInserir.Text = "&Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnDeletar
             // 
@@ -175,6 +177,7 @@
             this.btnDeletar.TabIndex = 12;
             this.btnDeletar.Text = "&Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnGravar
             // 
@@ -185,6 +188,7 @@
             this.btnGravar.TabIndex = 13;
             this.btnGravar.Text = "&Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnEditar
             // 
@@ -195,6 +199,7 @@
             this.btnEditar.TabIndex = 14;
             this.btnEditar.Text = "&Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnLimpar
             // 
@@ -225,6 +230,7 @@
             this.btnSair.TabIndex = 17;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnCancelar
             // 
@@ -248,6 +254,32 @@
             this.pnlPesqusiar.TabIndex = 19;
             this.pnlPesqusiar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar.Location = new System.Drawing.Point(122, 188);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 3;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            // 
+            // lblPesquisar
+            // 
+            this.lblPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesquisar.Location = new System.Drawing.Point(19, 125);
+            this.lblPesquisar.Name = "lblPesquisar";
+            this.lblPesquisar.Size = new System.Drawing.Size(178, 23);
+            this.lblPesquisar.TabIndex = 2;
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(19, 157);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(178, 25);
+            this.txtPesquisar.TabIndex = 1;
+            // 
             // gpbPesquisar
             // 
             this.gpbPesquisar.Controls.Add(this.rdbEstoque);
@@ -263,16 +295,16 @@
             this.gpbPesquisar.Text = "Pesquisar";
             this.gpbPesquisar.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // rdbTodos
+            // rdbEstoque
             // 
-            this.rdbTodos.AutoSize = true;
-            this.rdbTodos.Location = new System.Drawing.Point(7, 23);
-            this.rdbTodos.Name = "rdbTodos";
-            this.rdbTodos.Size = new System.Drawing.Size(70, 21);
-            this.rdbTodos.TabIndex = 0;
-            this.rdbTodos.TabStop = true;
-            this.rdbTodos.Text = "Todos";
-            this.rdbTodos.UseVisualStyleBackColor = true;
+            this.rdbEstoque.AutoSize = true;
+            this.rdbEstoque.Location = new System.Drawing.Point(77, 51);
+            this.rdbEstoque.Name = "rdbEstoque";
+            this.rdbEstoque.Size = new System.Drawing.Size(85, 21);
+            this.rdbEstoque.TabIndex = 2;
+            this.rdbEstoque.TabStop = true;
+            this.rdbEstoque.Text = "Estoque";
+            this.rdbEstoque.UseVisualStyleBackColor = true;
             // 
             // rdbId
             // 
@@ -285,17 +317,6 @@
             this.rdbId.Text = "ID";
             this.rdbId.UseVisualStyleBackColor = true;
             // 
-            // rdbEstoque
-            // 
-            this.rdbEstoque.AutoSize = true;
-            this.rdbEstoque.Location = new System.Drawing.Point(77, 51);
-            this.rdbEstoque.Name = "rdbEstoque";
-            this.rdbEstoque.Size = new System.Drawing.Size(85, 21);
-            this.rdbEstoque.TabIndex = 2;
-            this.rdbEstoque.TabStop = true;
-            this.rdbEstoque.Text = "Estoque";
-            this.rdbEstoque.UseVisualStyleBackColor = true;
-            // 
             // rdbDescricao
             // 
             this.rdbDescricao.AutoSize = true;
@@ -307,31 +328,16 @@
             this.rdbDescricao.Text = "Descrição";
             this.rdbDescricao.UseVisualStyleBackColor = true;
             // 
-            // txtPesquisar
+            // rdbTodos
             // 
-            this.txtPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(19, 157);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(178, 25);
-            this.txtPesquisar.TabIndex = 1;
-            // 
-            // lblPesquisar
-            // 
-            this.lblPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesquisar.Location = new System.Drawing.Point(19, 125);
-            this.lblPesquisar.Name = "lblPesquisar";
-            this.lblPesquisar.Size = new System.Drawing.Size(178, 23);
-            this.lblPesquisar.TabIndex = 2;
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar.Location = new System.Drawing.Point(122, 188);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
-            this.btnFiltrar.TabIndex = 3;
-            this.btnFiltrar.Text = "Filtrar";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.rdbTodos.AutoSize = true;
+            this.rdbTodos.Location = new System.Drawing.Point(7, 23);
+            this.rdbTodos.Name = "rdbTodos";
+            this.rdbTodos.Size = new System.Drawing.Size(70, 21);
+            this.rdbTodos.TabIndex = 0;
+            this.rdbTodos.TabStop = true;
+            this.rdbTodos.Text = "Todos";
+            this.rdbTodos.UseVisualStyleBackColor = true;
             // 
             // FormProduto
             // 
@@ -351,17 +357,17 @@
             this.Controls.Add(this.txtValorVenda);
             this.Controls.Add(this.txtEstoque);
             this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.lblIdProduto);
+            this.Controls.Add(this.lblIdProdutos);
             this.Controls.Add(this.lblEstoque);
             this.Controls.Add(this.lblValorVenda);
             this.Controls.Add(this.lblValorCompra);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.lblId);
-            this.Controls.Add(this.dgvProduto);
+            this.Controls.Add(this.dgvProdutos);
             this.Name = "FormProduto";
             this.Text = "FormProduto";
             this.Load += new System.EventHandler(this.FormProduto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.pnlPesqusiar.ResumeLayout(false);
             this.pnlPesqusiar.PerformLayout();
             this.gpbPesquisar.ResumeLayout(false);
@@ -373,13 +379,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvProduto;
+        private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblValorCompra;
         private System.Windows.Forms.Label lblValorVenda;
         private System.Windows.Forms.Label lblEstoque;
-        private System.Windows.Forms.Label lblIdProduto;
+        private System.Windows.Forms.Label lblIdProdutos;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.TextBox txtEstoque;
         private System.Windows.Forms.TextBox txtValorVenda;
