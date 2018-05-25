@@ -52,7 +52,7 @@ namespace RenatoEmbalagens
             Camadas.BLL.Produtos bllPro = new Camadas.BLL.Produtos();
             dgvProdutos.DataSource = bllPro.Select();
             Habilitar(false);
-           // pnlPesquisa.Visible = false;
+           pnlPesquisa.Visible = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -168,6 +168,93 @@ namespace RenatoEmbalagens
             dgvProdutos.DataSource = bllPro.Select();
             limparCampos();
             Habilitar(false);
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Habilitar(false);
+            limparCampos();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+           pnlPesquisa.Visible = !pnlPesquisa.Visible;
+            rdbTodos.Checked = true;
+
+        }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            lblPesquisa.Visible = false;
+            txtPesquisa.Visible = false;
+            btnFiltrar.Visible = false;
+            Camadas.BLL.Produtos bllProdutos = new Camadas.BLL.Produtos();
+            dgvProdutos.DataSource = "";
+            dgvProdutos.DataSource = bllProdutos.Select();
+        }
+
+        private void rdbId_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvProdutos.DataSource = "";
+            lblPesquisa.Text = "Informa o ID: ";
+            lblPesquisa.Visible = true;
+            txtPesquisa.Text = "";
+            txtPesquisa.Visible = true;
+            btnFiltrar.Visible = true;
+            txtPesquisa.Focus();
+        }
+
+        private void rdbDescricao_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvProdutos.DataSource = "";
+            lblPesquisa.Text = "Informa a Descrição: ";
+            lblPesquisa.Visible = true;
+            txtPesquisa.Text = "";
+            txtPesquisa.Visible = true;
+            btnFiltrar.Visible = true;
+            txtPesquisa.Focus();
+        }
+
+        private void rdbEstoque_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvProdutos.DataSource = "";
+            lblPesquisa.Text = "Informe o Estoque: ";
+            lblPesquisa.Visible = true;
+            txtPesquisa.Text = "";
+            txtPesquisa.Visible = true;
+            btnFiltrar.Visible = true;
+            txtPesquisa.Focus();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            if (txtPesquisa.Text != String.Empty)
+            {
+                Camadas.BLL.Produtos bllPro = new Camadas.BLL.Produtos();
+                List<Camadas.Model.Produtos> lstProdutos = new List<Camadas.Model.Produtos>();
+
+                if (rdbId.Checked == true)
+                    lstProdutos = bllPro.SelectById(Convert.ToInt32(txtPesquisa.Text));
+                else if (rdbDescricao.Checked == true)
+                    lstProdutos = bllPro.SelectByDescricao(txtPesquisa.Text);
+                else if (rdbEstoque.Checked == true)
+                    lstProdutos = bllPro.SelectByEstoque(txtPesquisa.Text);
+
+                dgvProdutos.DataSource = "";
+                dgvProdutos.DataSource = lstProdutos;
+            }
+            else
+            {
+                string msg = "Campo Pesquisa está Vazio...";
+                MessageBox.Show(msg, "Pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
     }

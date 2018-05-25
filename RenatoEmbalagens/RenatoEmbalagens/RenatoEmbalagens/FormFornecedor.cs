@@ -65,6 +65,9 @@ namespace RenatoEmbalagens
             dgvFornecedor.DataSource = bllFor.Select();
             Habilitar(false);
             pnlPesquisa.Visible = false;
+            txtPesquisa.Visible = false;
+            lblPesquisa.Visible = false;
+            btnFiltrar.Visible = false;
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -256,6 +259,11 @@ namespace RenatoEmbalagens
                 string msg = "Campo Pesquisa está Vazio...";
                 MessageBox.Show(msg, "Pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void pnlPesquisar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

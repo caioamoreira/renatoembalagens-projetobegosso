@@ -44,21 +44,21 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnPesquisa = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pnlPesqusiar = new System.Windows.Forms.Panel();
+            this.pnlPesquisa = new System.Windows.Forms.Panel();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            this.lblPesquisar = new System.Windows.Forms.Label();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.gpbPesquisar = new System.Windows.Forms.GroupBox();
+            this.lblPesquisa = new System.Windows.Forms.Label();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.gpbPesquisa = new System.Windows.Forms.GroupBox();
             this.rdbEstoque = new System.Windows.Forms.RadioButton();
             this.rdbId = new System.Windows.Forms.RadioButton();
             this.rdbDescricao = new System.Windows.Forms.RadioButton();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
-            this.pnlPesqusiar.SuspendLayout();
-            this.gpbPesquisar.SuspendLayout();
+            this.pnlPesquisa.SuspendLayout();
+            this.gpbPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvProdutos
@@ -210,16 +210,18 @@
             this.btnLimpar.TabIndex = 15;
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // btnPesquisar
+            // btnPesquisa
             // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(593, 408);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(89, 23);
-            this.btnPesquisar.TabIndex = 16;
-            this.btnPesquisar.Text = "&Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisa.Location = new System.Drawing.Point(593, 408);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(89, 23);
+            this.btnPesquisa.TabIndex = 16;
+            this.btnPesquisa.Text = "&Pesquisar";
+            this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnSair
             // 
@@ -241,18 +243,19 @@
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // pnlPesqusiar
+            // pnlPesquisa
             // 
-            this.pnlPesqusiar.Controls.Add(this.btnFiltrar);
-            this.pnlPesqusiar.Controls.Add(this.lblPesquisar);
-            this.pnlPesqusiar.Controls.Add(this.txtPesquisar);
-            this.pnlPesqusiar.Controls.Add(this.gpbPesquisar);
-            this.pnlPesqusiar.Location = new System.Drawing.Point(447, 9);
-            this.pnlPesqusiar.Name = "pnlPesqusiar";
-            this.pnlPesqusiar.Size = new System.Drawing.Size(221, 223);
-            this.pnlPesqusiar.TabIndex = 19;
-            this.pnlPesqusiar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlPesquisa.Controls.Add(this.btnFiltrar);
+            this.pnlPesquisa.Controls.Add(this.lblPesquisa);
+            this.pnlPesquisa.Controls.Add(this.txtPesquisa);
+            this.pnlPesquisa.Controls.Add(this.gpbPesquisa);
+            this.pnlPesquisa.Location = new System.Drawing.Point(447, 9);
+            this.pnlPesquisa.Name = "pnlPesquisa";
+            this.pnlPesquisa.Size = new System.Drawing.Size(221, 223);
+            this.pnlPesquisa.TabIndex = 19;
+            this.pnlPesquisa.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnFiltrar
             // 
@@ -263,37 +266,39 @@
             this.btnFiltrar.TabIndex = 3;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // lblPesquisar
+            // lblPesquisa
             // 
-            this.lblPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesquisar.Location = new System.Drawing.Point(19, 125);
-            this.lblPesquisar.Name = "lblPesquisar";
-            this.lblPesquisar.Size = new System.Drawing.Size(178, 23);
-            this.lblPesquisar.TabIndex = 2;
+            this.lblPesquisa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesquisa.Location = new System.Drawing.Point(19, 125);
+            this.lblPesquisa.Name = "lblPesquisa";
+            this.lblPesquisa.Size = new System.Drawing.Size(178, 23);
+            this.lblPesquisa.TabIndex = 2;
             // 
-            // txtPesquisar
+            // txtPesquisa
             // 
-            this.txtPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(19, 157);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(178, 25);
-            this.txtPesquisar.TabIndex = 1;
+            this.txtPesquisa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(19, 157);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(178, 25);
+            this.txtPesquisa.TabIndex = 1;
             // 
-            // gpbPesquisar
+            // gpbPesquisa
             // 
-            this.gpbPesquisar.Controls.Add(this.rdbEstoque);
-            this.gpbPesquisar.Controls.Add(this.rdbId);
-            this.gpbPesquisar.Controls.Add(this.rdbDescricao);
-            this.gpbPesquisar.Controls.Add(this.rdbTodos);
-            this.gpbPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbPesquisar.Location = new System.Drawing.Point(19, 17);
-            this.gpbPesquisar.Name = "gpbPesquisar";
-            this.gpbPesquisar.Size = new System.Drawing.Size(178, 100);
-            this.gpbPesquisar.TabIndex = 0;
-            this.gpbPesquisar.TabStop = false;
-            this.gpbPesquisar.Text = "Pesquisar";
-            this.gpbPesquisar.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.gpbPesquisa.BackColor = System.Drawing.Color.LightGray;
+            this.gpbPesquisa.Controls.Add(this.rdbEstoque);
+            this.gpbPesquisa.Controls.Add(this.rdbId);
+            this.gpbPesquisa.Controls.Add(this.rdbDescricao);
+            this.gpbPesquisa.Controls.Add(this.rdbTodos);
+            this.gpbPesquisa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbPesquisa.Location = new System.Drawing.Point(19, 17);
+            this.gpbPesquisa.Name = "gpbPesquisa";
+            this.gpbPesquisa.Size = new System.Drawing.Size(178, 100);
+            this.gpbPesquisa.TabIndex = 0;
+            this.gpbPesquisa.TabStop = false;
+            this.gpbPesquisa.Text = "Pesquisar";
+            this.gpbPesquisa.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rdbEstoque
             // 
@@ -305,6 +310,7 @@
             this.rdbEstoque.TabStop = true;
             this.rdbEstoque.Text = "Estoque";
             this.rdbEstoque.UseVisualStyleBackColor = true;
+            this.rdbEstoque.CheckedChanged += new System.EventHandler(this.rdbEstoque_CheckedChanged);
             // 
             // rdbId
             // 
@@ -316,6 +322,7 @@
             this.rdbId.TabStop = true;
             this.rdbId.Text = "ID";
             this.rdbId.UseVisualStyleBackColor = true;
+            this.rdbId.CheckedChanged += new System.EventHandler(this.rdbId_CheckedChanged);
             // 
             // rdbDescricao
             // 
@@ -327,6 +334,7 @@
             this.rdbDescricao.TabStop = true;
             this.rdbDescricao.Text = "Descrição";
             this.rdbDescricao.UseVisualStyleBackColor = true;
+            this.rdbDescricao.CheckedChanged += new System.EventHandler(this.rdbDescricao_CheckedChanged);
             // 
             // rdbTodos
             // 
@@ -338,16 +346,17 @@
             this.rdbTodos.TabStop = true;
             this.rdbTodos.Text = "Todos";
             this.rdbTodos.UseVisualStyleBackColor = true;
+            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 452);
-            this.Controls.Add(this.pnlPesqusiar);
+            this.Controls.Add(this.pnlPesquisa);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.btnPesquisa);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGravar);
@@ -368,10 +377,10 @@
             this.Text = "FormProduto";
             this.Load += new System.EventHandler(this.FormProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
-            this.pnlPesqusiar.ResumeLayout(false);
-            this.pnlPesqusiar.PerformLayout();
-            this.gpbPesquisar.ResumeLayout(false);
-            this.gpbPesquisar.PerformLayout();
+            this.pnlPesquisa.ResumeLayout(false);
+            this.pnlPesquisa.PerformLayout();
+            this.gpbPesquisa.ResumeLayout(false);
+            this.gpbPesquisa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,14 +404,14 @@
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Panel pnlPesqusiar;
-        private System.Windows.Forms.GroupBox gpbPesquisar;
+        private System.Windows.Forms.Panel pnlPesquisa;
+        private System.Windows.Forms.GroupBox gpbPesquisa;
         private System.Windows.Forms.Button btnFiltrar;
-        private System.Windows.Forms.Label lblPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Label lblPesquisa;
+        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.RadioButton rdbEstoque;
         private System.Windows.Forms.RadioButton rdbId;
         private System.Windows.Forms.RadioButton rdbDescricao;

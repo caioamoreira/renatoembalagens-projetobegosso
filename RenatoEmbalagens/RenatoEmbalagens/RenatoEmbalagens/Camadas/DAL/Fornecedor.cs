@@ -53,7 +53,7 @@ namespace RenatoEmbalagens.Camadas.DAL
             SqlConnection conexao = new SqlConnection(strCon);
             string sql = "Select * from Fornecedor where idFornecedor=@idFornecedor;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@idFornedor", idFornecedor);
+            cmd.Parameters.AddWithValue("@idFornecedor", idFornecedor);
             conexao.Open();
             try
             {

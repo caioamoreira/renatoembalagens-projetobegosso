@@ -271,7 +271,6 @@
             // 
             // pnlPesquisar
             // 
-            this.pnlPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlPesquisar.Controls.Add(this.btnFiltrar);
             this.pnlPesquisar.Controls.Add(this.lblPesquisa);
             this.pnlPesquisar.Controls.Add(this.txtPesquisa);
@@ -280,6 +279,7 @@
             this.pnlPesquisar.Name = "pnlPesquisar";
             this.pnlPesquisar.Size = new System.Drawing.Size(281, 238);
             this.pnlPesquisar.TabIndex = 22;
+            this.pnlPesquisar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPesquisar_Paint);
             // 
             // btnFiltrar
             // 
@@ -294,7 +294,6 @@
             // 
             // lblPesquisa
             // 
-            this.lblPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPesquisa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesquisa.Location = new System.Drawing.Point(20, 122);
             this.lblPesquisa.Name = "lblPesquisa";
@@ -311,7 +310,7 @@
             // 
             // pnlPesquisa
             // 
-            this.pnlPesquisa.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlPesquisa.BackColor = System.Drawing.Color.LightGray;
             this.pnlPesquisa.Controls.Add(this.rdbCidade);
             this.pnlPesquisa.Controls.Add(this.rdbEmpresa);
             this.pnlPesquisa.Controls.Add(this.rdbId);

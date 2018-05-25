@@ -51,14 +51,14 @@
             this.lblIdCliente = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pnlPesquisa = new System.Windows.Forms.Panel();
-            this.gpdPesquisar = new System.Windows.Forms.GroupBox();
             this.lblPesquisa = new System.Windows.Forms.Label();
-            this.rdbTodos = new System.Windows.Forms.RadioButton();
-            this.rdbId = new System.Windows.Forms.RadioButton();
-            this.rdbCidade = new System.Windows.Forms.RadioButton();
-            this.btnFiltrar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.gpdPesquisar = new System.Windows.Forms.GroupBox();
             this.rdbNome = new System.Windows.Forms.RadioButton();
+            this.rdbCidade = new System.Windows.Forms.RadioButton();
+            this.rdbId = new System.Windows.Forms.RadioButton();
+            this.rdbTodos = new System.Windows.Forms.RadioButton();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnPesquisa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlPesquisa.SuspendLayout();
@@ -284,7 +284,6 @@
             // 
             // pnlPesquisa
             // 
-            this.pnlPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlPesquisa.Controls.Add(this.lblPesquisa);
             this.pnlPesquisa.Controls.Add(this.txtPesquisa);
             this.pnlPesquisa.Controls.Add(this.gpdPesquisar);
@@ -294,9 +293,24 @@
             this.pnlPesquisa.Size = new System.Drawing.Size(302, 210);
             this.pnlPesquisa.TabIndex = 23;
             // 
+            // lblPesquisa
+            // 
+            this.lblPesquisa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesquisa.Location = new System.Drawing.Point(25, 99);
+            this.lblPesquisa.Name = "lblPesquisa";
+            this.lblPesquisa.Size = new System.Drawing.Size(258, 23);
+            this.lblPesquisa.TabIndex = 24;
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Location = new System.Drawing.Point(28, 136);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(258, 20);
+            this.txtPesquisa.TabIndex = 26;
+            // 
             // gpdPesquisar
             // 
-            this.gpdPesquisar.BackColor = System.Drawing.Color.Gray;
+            this.gpdPesquisar.BackColor = System.Drawing.Color.LightGray;
             this.gpdPesquisar.Controls.Add(this.rdbNome);
             this.gpdPesquisar.Controls.Add(this.rdbCidade);
             this.gpdPesquisar.Controls.Add(this.rdbId);
@@ -310,35 +324,16 @@
             this.gpdPesquisar.Text = "Pesquisar";
             this.gpdPesquisar.Enter += new System.EventHandler(this.gpdPesquisar_Enter);
             // 
-            // lblPesquisa
+            // rdbNome
             // 
-            this.lblPesquisa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesquisa.Location = new System.Drawing.Point(25, 99);
-            this.lblPesquisa.Name = "lblPesquisa";
-            this.lblPesquisa.Size = new System.Drawing.Size(258, 23);
-            this.lblPesquisa.TabIndex = 24;
-            // 
-            // rdbTodos
-            // 
-            this.rdbTodos.AutoSize = true;
-            this.rdbTodos.Location = new System.Drawing.Point(16, 20);
-            this.rdbTodos.Name = "rdbTodos";
-            this.rdbTodos.Size = new System.Drawing.Size(70, 21);
-            this.rdbTodos.TabIndex = 0;
-            this.rdbTodos.Text = "Todos";
-            this.rdbTodos.UseVisualStyleBackColor = true;
-            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
-            // 
-            // rdbId
-            // 
-            this.rdbId.AutoSize = true;
-            this.rdbId.Location = new System.Drawing.Point(16, 46);
-            this.rdbId.Name = "rdbId";
-            this.rdbId.Size = new System.Drawing.Size(40, 21);
-            this.rdbId.TabIndex = 1;
-            this.rdbId.Text = "Id";
-            this.rdbId.UseVisualStyleBackColor = true;
-            this.rdbId.CheckedChanged += new System.EventHandler(this.rdbId_CheckedChanged);
+            this.rdbNome.AutoSize = true;
+            this.rdbNome.Location = new System.Drawing.Point(143, 19);
+            this.rdbNome.Name = "rdbNome";
+            this.rdbNome.Size = new System.Drawing.Size(68, 21);
+            this.rdbNome.TabIndex = 3;
+            this.rdbNome.Text = "Nome";
+            this.rdbNome.UseVisualStyleBackColor = true;
+            this.rdbNome.CheckedChanged += new System.EventHandler(this.rdbNome_CheckedChanged);
             // 
             // rdbCidade
             // 
@@ -353,6 +348,28 @@
             this.rdbCidade.UseVisualStyleBackColor = true;
             this.rdbCidade.CheckedChanged += new System.EventHandler(this.rdbCidade_CheckedChanged);
             // 
+            // rdbId
+            // 
+            this.rdbId.AutoSize = true;
+            this.rdbId.Location = new System.Drawing.Point(16, 46);
+            this.rdbId.Name = "rdbId";
+            this.rdbId.Size = new System.Drawing.Size(40, 21);
+            this.rdbId.TabIndex = 1;
+            this.rdbId.Text = "Id";
+            this.rdbId.UseVisualStyleBackColor = true;
+            this.rdbId.CheckedChanged += new System.EventHandler(this.rdbId_CheckedChanged);
+            // 
+            // rdbTodos
+            // 
+            this.rdbTodos.AutoSize = true;
+            this.rdbTodos.Location = new System.Drawing.Point(16, 20);
+            this.rdbTodos.Name = "rdbTodos";
+            this.rdbTodos.Size = new System.Drawing.Size(70, 21);
+            this.rdbTodos.TabIndex = 0;
+            this.rdbTodos.Text = "Todos";
+            this.rdbTodos.UseVisualStyleBackColor = true;
+            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
+            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -363,24 +380,6 @@
             this.btnFiltrar.Text = "&Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Location = new System.Drawing.Point(28, 136);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(258, 20);
-            this.txtPesquisa.TabIndex = 26;
-            // 
-            // rdbNome
-            // 
-            this.rdbNome.AutoSize = true;
-            this.rdbNome.Location = new System.Drawing.Point(143, 19);
-            this.rdbNome.Name = "rdbNome";
-            this.rdbNome.Size = new System.Drawing.Size(68, 21);
-            this.rdbNome.TabIndex = 3;
-            this.rdbNome.Text = "Nome";
-            this.rdbNome.UseVisualStyleBackColor = true;
-            this.rdbNome.CheckedChanged += new System.EventHandler(this.rdbNome_CheckedChanged);
             // 
             // btnPesquisa
             // 

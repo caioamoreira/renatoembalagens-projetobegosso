@@ -86,7 +86,7 @@ namespace RenatoEmbalagens.Camadas.DAL
         {
             List<Model.Produtos> lstProdutos = new List<Model.Produtos>();
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Select * from Produtos where(nome like @Descricao);";
+            string sql = "Select * from Produtos where(descricao like @Descricao);";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@Descricao", descricao.Trim() + "%");
             conexao.Open();
