@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,20 +47,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Camadas\BLL\Cliente.cs" />
+    <Compile Include="Camadas\BLL\Compras.cs" />
+    <Compile Include="Camadas\BLL\Detalhe_Compras.cs" />
     <Compile Include="Camadas\BLL\Fornecedor.cs" />
+    <Compile Include="Camadas\BLL\Pagamentos.cs" />
     <Compile Include="Camadas\BLL\Produtos.cs" />
     <Compile Include="Camadas\DAL\Cliente.cs" />
+    <Compile Include="Camadas\DAL\Compras.cs" />
     <Compile Include="Camadas\DAL\Conexao.cs" />
+    <Compile Include="Camadas\DAL\Detalhe_Compras.cs" />
     <Compile Include="Camadas\DAL\Fornecedor.cs" />
+    <Compile Include="Camadas\DAL\Pagamentos.cs" />
     <Compile Include="Camadas\DAL\Produtos.cs" />
     <Compile Include="Camadas\Model\Cliente.cs" />
+    <Compile Include="Camadas\Model\Compras.cs" />
+    <Compile Include="Camadas\Model\Detalhe_Compras.cs" />
     <Compile Include="Camadas\Model\Fornecedor.cs" />
+    <Compile Include="Camadas\Model\Pagamentos.cs" />
     <Compile Include="Camadas\Model\Produtos.cs" />
     <Compile Include="FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCliente.Designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompras.Designer.cs">
+      <DependentUpon>FormCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGastoViagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGastoViagem.Designer.cs">
+      <DependentUpon>FormGastoViagem.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -85,10 +107,22 @@
     <Compile Include="FormProduto.Designer.cs">
       <DependentUpon>FormProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagamentos.Designer.cs">
+      <DependentUpon>Pagamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCompras.resx">
+      <DependentUpon>FormCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGastoViagem.resx">
+      <DependentUpon>FormGastoViagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -101,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProduto.resx">
       <DependentUpon>FormProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagamentos.resx">
+      <DependentUpon>Pagamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +161,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="dgvCompra\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

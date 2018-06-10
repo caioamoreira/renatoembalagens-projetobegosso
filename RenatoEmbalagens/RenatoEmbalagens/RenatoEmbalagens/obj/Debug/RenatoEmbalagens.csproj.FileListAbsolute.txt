@@ -25,3 +25,6 @@ C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\R
 C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\bin\Debug\RenatoEmbalagens.exe
 C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\bin\Debug\RenatoEmbalagens.pdb
 C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormProduto.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormCompras.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.FormGastoViagem.resources
+C:\Users\Caio Moreira\Desktop\renatoembalagens-projetobegosso\RenatoEmbalagens\RenatoEmbalagens\RenatoEmbalagens\obj\Debug\RenatoEmbalagens.Pagamentos.resources
